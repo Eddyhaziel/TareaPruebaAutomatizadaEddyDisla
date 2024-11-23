@@ -1,79 +1,81 @@
 # Historias de Usuario
 
-## 1. Login en la aplicación
+### Historia de Usuario 1: Acceso a la página de inicio
 
-- **Historia de Usuario**: Como usuario registrado, quiero iniciar sesión con mi correo electrónico y contraseña para acceder a mi cuenta.
-- **Criterios de Aceptación**:
-  - El formulario de login debe aceptar un correo electrónico y una contraseña.
-  - Al ingresar las credenciales correctas, el usuario debe ser redirigido a la página principal.
-- **Criterios de Rechazo**:
-  - Si las credenciales son incorrectas, se debe mostrar un mensaje de error.
-  - Si el campo de correo electrónico está vacío, debe aparecer un mensaje de advertencia.
+**Descripción**: Como usuario, quiero poder acceder a la página de inicio para ver el contenido principal de la web.
 
-## 2. Agregar producto al carrito
+**Criterios de Aceptación**:
+- Al ingresar la URL, la página de inicio debe cargarse correctamente.
+- La página debe contener un encabezado, una barra de navegación y un pie de página.
+- La página debe ser completamente responsive en dispositivos móviles y de escritorio.
 
-- **Historia de Usuario**: Como comprador, quiero agregar productos a mi carrito para poder realizar una compra más tarde.
-- **Criterios de Aceptación**:
-  - Al hacer clic en el botón "Agregar al carrito", el producto debe ser agregado al carrito.
-  - El número de productos en el carrito debe reflejarse correctamente.
-- **Criterios de Rechazo**:
-  - Si el botón "Agregar al carrito" no funciona, el producto no debe ser agregado al carrito.
-  - Si el carrito está vacío, debe mostrar un mensaje "Carrito vacío".
+**Criterios de Rechazo**:
+- Si la página no carga o muestra un error 404.
+- Si el contenido de la página está incompleto o desordenado.
+- Si la página no es responsive y no se adapta correctamente a pantallas pequeñas.
 
-## 3. Visualización de productos en la tienda
+### Historia de Usuario 2: Acceso a la sección de venta de productos
 
-- **Historia de Usuario**: Como usuario, quiero ver los productos disponibles en la tienda para poder elegir el que deseo comprar.
-- **Criterios de Aceptación**:
-  - Todos los productos disponibles deben mostrarse en la página de inicio.
-  - Cada producto debe mostrar su imagen, precio y nombre.
-- **Criterios de Rechazo**:
-  - Si algún producto no se carga, debe aparecer un mensaje indicando que no está disponible.
+**Descripción**: Como usuario, quiero ver los productos disponibles en la tienda para poder comprar.
 
-## 4. Validación de campo de email en formulario
+**Criterios de Aceptación**:
+- La página debe mostrar una lista de productos con imágenes y su nombre.
+- Los productos deben estar organizados en categorías.
+- Los productos deben ser clickeables y deben redirigir a un popup.
 
-- **Historia de Usuario**: Como usuario, quiero que el campo de email en el formulario se valide correctamente para asegurarme de que mi correo es correcto.
-- **Criterios de Aceptación**:
-  - El campo de email debe aceptar solo direcciones de correo electrónico válidas.
-  - Si el formato del email es incorrecto, debe mostrarse un mensaje de error.
-- **Criterios de Rechazo**:
-  - Si el correo electrónico está vacío o tiene un formato incorrecto, no debe enviarse el formulario.
+**Criterios de Rechazo**:
+- Si la sección de productos no carga correctamente.
+- Si los productos no están bien organizados o no se puede navegar entre categorías.
+- Si los productos no tienen imágenes o no cargan correctamente.
 
-## 5. Buscar producto en la barra de búsqueda
+### Historia de Usuario 3: Visualización del footer
 
-- **Historia de Usuario**: Como usuario, quiero buscar productos usando la barra de búsqueda para encontrar rápidamente lo que estoy buscando.
-- **Criterios de Aceptación**:
-  - La barra de búsqueda debe aceptar texto y devolver productos relevantes.
-  - Los resultados deben mostrarse de forma clara y ordenada.
-- **Criterios de Rechazo**:
-  - Si no hay resultados, debe mostrarse un mensaje indicando que no se encontraron productos.
+**Descripción**: Como usuario, quiero que el footer se muestre al final de la página para poder acceder a información adicional.
 
-## 6. Registro de nuevo usuario
+**Criterios de Aceptación**:
+- El footer debe contener enlaces a las políticas de privacidad, términos y condiciones y redes sociales.
+- El footer debe ser visible en todas las páginas, incluso al hacer scroll hacia abajo.
 
-- **Historia de Usuario**: Como nuevo usuario, quiero registrarme en la aplicación utilizando mi correo electrónico y una contraseña para crear una cuenta y poder acceder a las funciones del sitio.
-- **Criterios de Aceptación**:
-  - El formulario de registro debe aceptar un correo electrónico y una contraseña.
-  - El correo electrónico debe ser único, es decir, no debe estar registrado previamente.
-  - Al completar el registro, el usuario debe recibir un mensaje de confirmación de éxito.
-- **Criterios de Rechazo**:
-  - Si el correo electrónico ya está registrado, debe mostrarse un mensaje indicando que la cuenta ya existe.
-  - Si los campos del formulario están vacíos, debe mostrarse un mensaje de advertencia.
+**Criterios de Rechazo**:
+- Si el footer no se muestra en algunas páginas.
+- Si los enlaces en el footer no funcionan o no redirigen correctamente.
 
-## 7. Filtrar productos por categoría
+### Historia de Usuario 4: Mostrar un popup al hacer clic en un botón
 
-- **Historia de Usuario**: Como usuario, quiero poder filtrar los productos por categorías (por ejemplo, apartamentos, casas, terrenos) para encontrar fácilmente lo que busco.
-- **Criterios de Aceptación**:
-  - El usuario debe poder seleccionar una categoría de productos.
-  - Al seleccionar una categoría, solo los productos de esa categoría deben mostrarse.
-  - Los filtros deben ser claros y fáciles de usar.
-- **Criterios de Rechazo**:
-  - Si no hay productos en la categoría seleccionada, debe mostrarse un mensaje "No se encontraron productos en esta categoría".
-  - Si el filtro no aplica correctamente, se debe mostrar un mensaje de error.
+**Descripción**: Como usuario, quiero que al hacer clic en un botón, se muestre un popup con más detalles sobre una promoción o producto.
 
-## 8. Visualización del detalle del producto
+**Criterios de Aceptación**:
+- Al hacer clic en el botón, el popup debe aparecer en el centro de la pantalla.
+- El popup debe contener información relevante sobre el producto o promoción.
+- El popup debe tener un botón de cierre para que el usuario pueda cerrarlo fácilmente.
 
-- **Historia de Usuario**: Como usuario, quiero ver el detalle completo de un producto, incluyendo imágenes adicionales, descripción, ubicación y precio, para poder tomar una decisión informada sobre la compra.
-- **Criterios de Aceptación**:
-  - Al hacer clic en un producto, el usuario debe ser redirigido a una página con más detalles del producto.
-  - La página de detalles debe mostrar imágenes adicionales, una descripción detallada, ubicación y el precio del producto.
-- **Criterios de Rechazo**:
-  - Si no hay detalles disponibles, debe mostrarse un mensaje indicando que no hay información adicional disponible.
+**Criterios de Rechazo**:
+- Si el popup no aparece al hacer clic en el botón.
+- Si el popup está desordenado o no contiene la información necesaria.
+- Si no se puede cerrar el popup.
+
+### Historia de Usuario 5: Navegación responsive
+
+**Descripción**: Como usuario, quiero que la barra de navegación sea completamente funcional en dispositivos móviles y de escritorio.
+
+**Criterios de Aceptación**:
+- En dispositivos móviles, la barra de navegación debe transformarse en un menú desplegable (hamburguesa).
+- En escritorio, la barra de navegación debe mostrar los enlaces de forma horizontal.
+- El menú debe ser fácilmente accesible y debe redirigir a las secciones correspondientes.
+
+**Criterios de Rechazo**:
+- Si la barra de navegación no se adapta correctamente a dispositivos móviles.
+- Si el menú desplegable no funciona o se solapan los elementos.
+- Si los enlaces en la barra de navegación no redirigen correctamente.
+
+### Historia de Usuario 6: Carga rápida de la página
+
+**Descripción**: Como usuario, quiero que la página cargue rápidamente para no tener que esperar mucho tiempo.
+
+**Criterios de Aceptación**:
+- La página debe cargar en menos de 3 segundos en una conexión estándar.
+- Las imágenes deben estar optimizadas para no ralentizar la carga de la página.
+
+**Criterios de Rechazo**:
+- Si la página tarda más de 5 segundos en cargar.
+- Si las imágenes son muy grandes y afectan el tiempo de carga de la página.
