@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Pruebas Automatizadas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .status-passed {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status-failed {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Reporte de Pruebas Automatizadas</h1>
+        <p class="text-center">Fecha y hora de la última actualización: <strong>2024-11-24 10:00:00</strong></p>
+
+        <h2>Pruebas Realizadas:</h2>
+        <table id="tabla-resultados" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Prueba</th>
+                    <th>Resultado</th>
+                    <th>Fecha y Hora</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se agregarán dinámicamente los resultados de las pruebas -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Este script agregará filas a la tabla con los resultados de las pruebas
+        // Cada vez que una prueba sea realizada, su resultado se agregará aquí
+
+        // Ejemplo de cómo agregar los resultados
+        function agregarResultado(prueba, resultado, fechaHora) {
+            let tabla = document.getElementById("tabla-resultados").getElementsByTagName('tbody')[0];
+            let nuevaFila = tabla.insertRow();
+
+            let celdaPrueba = nuevaFila.insertCell(0);
+            celdaPrueba.textContent = prueba;
+
+            let celdaResultado = nuevaFila.insertCell(1);
+            celdaResultado.textContent = resultado;
+            celdaResultado.classList.add(resultado === "Pasó" ? "status-passed" : "status-failed");
+
+            let celdaFechaHora = nuevaFila.insertCell(2);
+            celdaFechaHora.textContent = fechaHora;
+        }
+
+        // Llamar a esta función cuando una prueba se ejecute
+        // Ejemplo de uso:
+        // agregarResultado('Verificar Título', 'Pasó', '2024-11-24 10:05:00');
+    </script>
+</body>
+</html>
+<tr><td>Verificar Título</td><td>PASÓ</td><td>Título de la página es 'Eddy's Living'</td><td>2024-11-24 22:31:00</td></tr>
